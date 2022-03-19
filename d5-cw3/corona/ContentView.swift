@@ -12,6 +12,11 @@ import SwiftUI
 
 
 struct ContentView: View {
+   var coronaNewCases = [
+   UserCovidInfo(fullName: "sohib", area: "alrawdah", numberofDoses: 2),
+   UserCovidInfo(fullName: "obidah", area: "girnadah", numberofDoses: 1),
+   UserCovidInfo(fullName: "ali", area: "reggai", numberofDoses: 0)
+   ]
     var body: some View {
         ZStack{
             Color.gray
@@ -28,33 +33,33 @@ struct ContentView: View {
                 VStack{
         // الحالة الأولى
                 // الاسم
-               Text("")
+                    Text("الاسم: \(coronaNewCases[0].fullName)")
 // المنطقة
-                Text("")
+                Text("المنطقة: \(coronaNewCases[0].area)")
                     // عدد الجرعات
-               Text("")
+               Text("عدد الجرعات: \(coronaNewCases[0].numberofDoses)")
 
                 Divider()
                 }
                 VStack{
         // الحالة الثانية
                 // الاسم
-               Text("")
+               Text("الاسم: \(coronaNewCases[1].fullName)")
                 // المنطقة
-               Text("")
+               Text("المنطقة: \(coronaNewCases[1].area)")
     // عدد الجرعات
-               Text("")
+               Text("عدد الجرعات: \(coronaNewCases[1].numberofDoses)")
 
                 Divider()
                 }
                 VStack{
               // الحالة الثالثة
                       // الاسم
-                     Text("")
+                     Text("السم: \(coronaNewCases[2].fullName)")
                       // المنطقة
-                     Text("")
+                     Text("االمنطقة: \(coronaNewCases[2].area)")
           // عدد الجرعات
-                     Text("")
+                     Text("عدد الجرعات: \(coronaNewCases[2].numberofDoses)")
                 }
                 Spacer()
                 HStack{
