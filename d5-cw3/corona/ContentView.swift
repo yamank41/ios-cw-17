@@ -33,35 +33,12 @@ struct ContentView: View {
                 VStack{
         // الحالة الأولى
                 // الاسم
-                    Text("الاسم: \(coronaNewCases[0].fullName)")
-// المنطقة
-                Text("المنطقة: \(coronaNewCases[0].area)")
-                    // عدد الجرعات
-               Text("عدد الجرعات: \(coronaNewCases[0].numberofDoses)")
-
-                Divider()
-                }
-                VStack{
-        // الحالة الثانية
-                // الاسم
-               Text("الاسم: \(coronaNewCases[1].fullName)")
-                // المنطقة
-               Text("المنطقة: \(coronaNewCases[1].area)")
-    // عدد الجرعات
-               Text("عدد الجرعات: \(coronaNewCases[1].numberofDoses)")
-
-                Divider()
-                }
-                VStack{
-              // الحالة الثالثة
-                      // الاسم
-                     Text("السم: \(coronaNewCases[2].fullName)")
-                      // المنطقة
-                     Text("االمنطقة: \(coronaNewCases[2].area)")
-          // عدد الجرعات
-                     Text("عدد الجرعات: \(coronaNewCases[2].numberofDoses)")
-                }
-                Spacer()
+                    List(coronaNewCases, id:\.id) {i in
+                        Text("full name: \(i.fullName)")
+                        Text("area: \(i.area)")
+                        Text("numbe of doses: \(i.numberofDoses)")
+                    }
+                    Spacer()
                 HStack{
                     Text("آخر تحديث ١٥-٣-٢٠٢٢")
                         .font(.system(size: 20, weight: .bold, design: .default))
@@ -88,3 +65,4 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
+}
